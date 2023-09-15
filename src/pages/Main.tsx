@@ -7,7 +7,6 @@ const Main = () => {
   return (
     <Wrapper>
       <Navbar />
-      <div>Main</div>
       <GlobalStyles />
     </Wrapper>
   );
@@ -22,4 +21,9 @@ const Wrapper = styled.div`
   align-items: center;
   min-height: 100vh;
   background-color: ${(props) => props.theme['primary']};
+
+  h1 {
+    color: ${({ theme }) => theme.onPrimary};
+    ${({ theme }) => theme.headline1};
+  }
 `;
