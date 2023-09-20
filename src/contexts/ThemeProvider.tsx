@@ -22,7 +22,7 @@ export const useThemeContext = () => {
 };
 
 export const ThemeProvider = ({ children }: IProps) => {
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
