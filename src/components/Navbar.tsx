@@ -80,12 +80,10 @@ const Contact = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0px 20px;
+
   & button {
-    border-radius: 30px;
-    border: 0;
-    padding: 10px 15px;
     color: ${({ theme }) => theme['secondary']};
-    ${({ theme }) => theme['menu']};
     background: ${({ theme }) => theme['onSecondary']};
+    ${({ theme }) => theme['menu']};
   }
 `;

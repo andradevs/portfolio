@@ -2,11 +2,13 @@ import { styled } from 'styled-components';
 
 import GlobalStyles from '../GlobalStyles';
 import Navbar from '../components/Navbar';
+import Bio from '../components/Bio';
 
 const Main = () => {
   return (
     <Wrapper>
       <Navbar />
+      <Bio />
       <GlobalStyles />
     </Wrapper>
   );
@@ -21,9 +23,4 @@ const Wrapper = styled.div`
   align-items: center;
   min-height: 100vh;
   background-color: ${(props) => props.theme['primary']};
-
-  h1 {
-    color: ${({ theme }) => theme.onPrimary};
-    ${({ theme }) => theme.headline1};
-  }
 `;
