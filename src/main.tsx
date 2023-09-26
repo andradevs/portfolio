@@ -6,15 +6,22 @@ import './main.css';
 import Main from './pages/Main';
 import { ThemeProvider } from './contexts/ThemeProvider';
 import Login from './pages/Login';
+import LoginForm from './components/forms/Login';
+import SignIn from './components/forms/SignIn';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Main />,
+    children: [],
   },
   {
     path: '/login',
     element: <Login />,
+    children: [
+      { path: '/login', element: <LoginForm /> },
+      { path: '/login/signin', element: <SignIn /> },
+    ],
   },
 ]);
 
