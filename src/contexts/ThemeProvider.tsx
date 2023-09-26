@@ -1,6 +1,7 @@
 import { createContext, useContext, useState } from 'react';
 import { ThemeProvider as Theme } from 'styled-components';
 import themes from '../themes/themes';
+import GlobalStyles from '../GlobalStyles';
 
 interface IContext {
   toggleTheme(): void;
@@ -22,7 +23,7 @@ export const useThemeContext = () => {
 };
 
 export const ThemeProvider = ({ children }: IProps) => {
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
@@ -30,7 +31,10 @@ export const ThemeProvider = ({ children }: IProps) => {
 
   return (
     <ThemeContext.Provider value={{ toggleTheme, theme }}>
-      <Theme theme={{ ...themes[theme], ...themes.fonts }}>{children}</Theme>
+      <Theme theme={{ ...themes[theme], ...themes.fonts }}>
+        {children}
+        <GlobalStyles />
+      </Theme>
     </ThemeContext.Provider>
   );
 };

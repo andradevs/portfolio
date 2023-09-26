@@ -7,7 +7,7 @@ const Bio = () => {
       <Avatar />
       <BioWrapper>
         <Headline>
-          Olá, meu nome é <span>Guilherme Andarade.</span>
+          Olá, meu nome é <span>Guilherme Andrade.</span>
         </Headline>
         <SubHeadline>Desenvolvedor Front-End e FullStack no Brasil, especializado em Desenvolvimento Web. </SubHeadline>
       </BioWrapper>
@@ -33,7 +33,7 @@ const BioWrapper = styled.div`
 `;
 
 const Headline = styled.h1`
-  ${({ theme }) => theme['headline3']}
+  ${({ theme }) => theme['headline2']}
   color:${({ theme }) => theme['onPrimary']};
 
   & span {

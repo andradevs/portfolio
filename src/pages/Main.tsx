@@ -1,15 +1,17 @@
 import { styled } from 'styled-components';
 
-import GlobalStyles from '../GlobalStyles';
 import Navbar from '../components/Navbar';
 import Bio from '../components/Bio';
+import Skills from '../components/Skills';
 
 const Main = () => {
   return (
     <Wrapper>
-      <Navbar />
-      <Bio />
-      <GlobalStyles />
+      <Container>
+        <Navbar />
+        <Bio />
+        <Skills />
+      </Container>
     </Wrapper>
   );
 };
@@ -17,10 +19,14 @@ const Main = () => {
 export default Main;
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
   align-items: center;
-  min-height: 100vh;
-  background-color: ${(props) => props.theme['primary']};
+  flex-direction: column;
+  display: flex;
+`;
+const Container = styled.div`
+  display: flex;
+  max-width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 `;

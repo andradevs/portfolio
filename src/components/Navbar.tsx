@@ -33,7 +33,6 @@ const Wrapper = styled.nav`
   display: grid;
   grid-template-columns: 20% 1fr auto;
   width: 100%;
-  max-width: 1440px;
   height: 80px;
   justify-content: center;
   align-items: center;
@@ -82,8 +81,17 @@ const Contact = styled.div`
   padding: 0px 20px;
 
   & button {
-    color: ${({ theme }) => theme['secondary']};
-    background: ${({ theme }) => theme['onSecondary']};
+    color: ${({ theme }) => theme['primary']};
+    background-color: ${({ theme }) => theme['onPrimary']};
     ${({ theme }) => theme['menu']};
+
+    &:hover {
+      background: ${({ theme }) => theme['onPrimary']}
+        radial-gradient(circle, transparent 1%, ${({ theme }) => theme['onPrimary']} 1%) center/15000%;
+    }
+
+    &:active {
+      background-color: ${({ theme }) => theme['onSecondary']};
+    }
   }
 `;

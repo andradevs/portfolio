@@ -5,11 +5,16 @@ import './main.css';
 
 import Main from './pages/Main';
 import { ThemeProvider } from './contexts/ThemeProvider';
+import Login from './pages/Login';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Main />,
+  },
+  {
+    path: '/login',
+    element: <Login />,
   },
 ]);
 
