@@ -1,19 +1,14 @@
 import styled from 'styled-components';
-import { useForm, SubmitHandler } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 import InlineInput from './ui/InlineInput';
 
 const Login = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
 
-  console.log(watch('example'));
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
       <h1>Login</h1>
@@ -37,7 +32,10 @@ const Form = styled.form`
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-
+  background-color: ${({ theme }) => theme['secondary']};
+  padding: 25px 30px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   & > button {
     align-self: self-end;
   }

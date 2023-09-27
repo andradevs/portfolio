@@ -2,6 +2,7 @@ import { createContext, useContext, useState } from 'react';
 import { ThemeProvider as Theme } from 'styled-components';
 import themes from '../themes/themes';
 import GlobalStyles from '../GlobalStyles';
+import { getFromLS, setToLS } from '../utils/storage';
 
 interface IContext {
   toggleTheme(): void;
@@ -23,10 +24,17 @@ export const useThemeContext = () => {
 };
 
 export const ThemeProvider = ({ children }: IProps) => {
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [theme, setTheme] = useState<'light' | 'dark'>(getFromLS('theme'));
+  // const [icon, setIcon] = useState();
 
   const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    if (theme === 'light' || !theme) {
+      setTheme('dark');
+      setToLS('theme', 'dark');
+    } else {
+      setTheme('light');
+      setToLS('theme', 'light');
+    }
   };
 
   return (

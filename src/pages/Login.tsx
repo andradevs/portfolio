@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import { Outlet } from 'react-router-dom';
+import ThemeToggle from '../components/ThemeToggle';
 
 const Login = () => {
   return (
     <Container>
       <Outlet />
+      <ThemeToggle />
     </Container>
   );
 };
@@ -16,9 +18,9 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
 
-  & > h1 {
-    ${({ theme }) => theme['headline3']};
-    color: ${({ theme }) => theme['onPrimary']};
+  & h1 {
+    ${({ theme }) => theme['title']};
+    color: ${({ theme }) => theme['menu']};
   }
 `;
 

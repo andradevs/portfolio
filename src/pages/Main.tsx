@@ -3,6 +3,7 @@ import { styled } from 'styled-components';
 import Navbar from '../components/Navbar';
 import Bio from '../components/Bio';
 import Skills from '../components/Skills';
+import ThemeToggle from '../components/ThemeToggle';
 
 const Main = () => {
   return (
@@ -12,6 +13,7 @@ const Main = () => {
         <Bio />
         <Skills />
       </Container>
+      <ThemeToggle />
     </Wrapper>
   );
 };
