@@ -13,7 +13,7 @@ const ThemeToggle = () => {
   return (
     <Wrapper onClick={toggleTheme}>
       <div>
-        <FontAwesomeIcon icon={themeIcon[theme]} />
+        <FontAwesomeIcon icon={themeIcon[theme] || faMoon} />
       </div>
     </Wrapper>
   );

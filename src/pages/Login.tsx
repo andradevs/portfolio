@@ -1,12 +1,19 @@
 import styled from 'styled-components';
-import { Outlet } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 import ThemeToggle from '../components/ThemeToggle';
+import LoginToken from '../components/LoginToken';
+import { AuthContext } from '../contexts/AuthProvider';
+import React, { useContext } from 'react';
 
 const Login = () => {
-  return (
+  const { currentUser } = useContext(AuthContext);
+  return currentUser != null ? (
+    <Navigate to="/" replace />
+  ) : (
     <Container>
       <Outlet />
       <ThemeToggle />
+      <LoginToken />
     </Container>
   );
 };
@@ -24,4 +31,4 @@ const Container = styled.div`
   }
 `;
 
-export default Login;
+export default React.memo(Login);

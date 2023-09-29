@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Bio from '../components/Bio';
 import Skills from '../components/Skills';
 import ThemeToggle from '../components/ThemeToggle';
+import LoginToken from '../components/LoginToken';
 
 const Main = () => {
   return (
@@ -14,6 +15,7 @@ const Main = () => {
         <Skills />
       </Container>
       <ThemeToggle />
+      <LoginToken />
     </Wrapper>
   );
 };

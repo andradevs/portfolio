@@ -1,21 +1,20 @@
 import styled from 'styled-components';
-import { useForm } from 'react-hook-form';
+import InlineInput from './ui/InlineInput';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { useForm } from 'react-hook-form';
+import { signUpWithEmail } from '../../services/firebase';
 
-import InlineInput from './ui/InlineInput';
-import { loginInWithEmail } from '../../services/firebase';
-
-const Login = () => {
+const SignIn = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     const { email, password } = data;
-    loginInWithEmail({ email, password });
+    signUpWithEmail({ email, password });
   };
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
-      <h1>Login</h1>
+      <h1>Sign Up</h1>
       <InlineInput props={{ placeholder: 'E-mail', type: 'email' }} id="email" label="E-mail" register={register} />
       <InlineInput
         props={{ type: 'password', placeholder: 'Password' }}
@@ -45,4 +44,4 @@ const Form = styled.form`
   }
 `;
 
-export default Login;
+export default SignIn;
