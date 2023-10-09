@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import { Navigate, Outlet } from 'react-router-dom';
+import { Navigate, Outlet, Link } from 'react-router-dom';
 import ThemeToggle from '../components/ThemeToggle';
 import LoginToken from '../components/LoginToken';
 import { AuthContext } from '../contexts/AuthProvider';
 import React, { useContext } from 'react';
+import Counter from '../components/Counter';
 
 const Login = () => {
   const { currentUser } = useContext(AuthContext);
@@ -11,9 +12,11 @@ const Login = () => {
     <Navigate to="/" replace />
   ) : (
     <Container>
+      <Link to={'/'}>Voltar</Link>
       <Outlet />
       <ThemeToggle />
       <LoginToken />
+      <Counter />
     </Container>
   );
 };

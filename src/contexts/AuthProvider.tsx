@@ -1,17 +1,18 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { auth } from '../services/firebase';
 import { User as FirebaseUser } from 'firebase/auth';
-import { User } from '../types/login';
 
 interface IContext {
-  currentUser: FirebaseUser | null;
+  currentUser: FirebaseUser | null | undefined;
+  signed: boolean;
+  loading: boolean;
 }
 
 interface IProps {
   children: React.ReactElement;
 }
 
-export const AuthContext = createContext<IContext>({ currentUser: null });
+export const AuthContext = createContext<IContext | null>(null);
 
 export const useAuthContext = () => {
   const context = useContext(AuthContext);
@@ -23,12 +24,20 @@ export const useAuthContext = () => {
 
 export const AuthProvider = ({ children }: IProps) => {
   const [currentUser, setCurrentUser] = useState<FirebaseUser | null>(null);
+  const [signed, setSigned] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const unsubscribe = () => {
       auth.onAuthStateChanged((user) => {
         setCurrentUser(user);
-        console.log(user, 'mudou');
+        if (user) {
+          setSigned(true);
+          setLoading(false);
+        } else {
+          setSigned(false);
+          setLoading(true);
+        }
       });
     };
 
@@ -37,5 +46,9 @@ export const AuthProvider = ({ children }: IProps) => {
     };
   }, []);
 
-  return <AuthContext.Provider value={{ currentUser }}>{children}</AuthContext.Provider>;
+  useEffect(() => {
+    console.log(currentUser, 'avocado');
+  }, [currentUser?.email]);
+
+  return <AuthContext.Provider value={{ currentUser, signed, loading }}>{children}</AuthContext.Provider>;
 };

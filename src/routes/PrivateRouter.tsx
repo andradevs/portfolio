@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
-import { AuthContext } from '../contexts/AuthProvider';
+import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
+import { useAuthContext } from '../contexts/AuthProvider';
+import GlobalSpiner from '../components/GlobalSpiner';
 
 const PrivateRouter = () => {
-  const { currentUser } = useContext(AuthContext);
-  console.log(currentUser, 'aaaa');
-  return currentUser ? <Outlet /> : <Navigate to="/login" replace />;
+  const { loading, signed } = useAuthContext();
+  return loading ? <GlobalSpiner /> : signed ? <Outlet /> : <Navigate to="/login" />;
 };
 
 export default React.memo(PrivateRouter);
