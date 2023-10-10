@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useThemeContext } from '../contexts/ThemeProvider';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
+import { Button } from './ui/StyledButton';
 
 const themeIcon = {
   light: faMoon,
@@ -19,7 +20,7 @@ const ThemeToggle = () => {
   );
 };
 
-const Wrapper = styled.button`
+const Wrapper = styled(Button)`
   display: flex;
   justify-content: center;
   align-items: center;

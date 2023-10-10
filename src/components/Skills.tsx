@@ -1,9 +1,11 @@
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 const Skills = () => {
+  const { t } = useTranslation();
   return (
     <Wrapper>
-      <h2>O que eu faço.</h2>
+      <h2>{t('What I do.')}</h2>
       <SkillGroup></SkillGroup>
     </Wrapper>
   );

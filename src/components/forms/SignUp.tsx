@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useForm } from 'react-hook-form';
 import { signUpWithEmail } from '../../services/firebase';
+import { Button } from '../ui/StyledButton';
 
 const SignIn = () => {
   const { register, handleSubmit } = useForm();
@@ -22,9 +23,9 @@ const SignIn = () => {
         label="Password"
         register={register}
       ></InlineInput>
-      <button type="submit">
+      <Button type="submit">
         <FontAwesomeIcon icon={faArrowRight} />
-      </button>
+      </Button>
     </Form>
   );
 };

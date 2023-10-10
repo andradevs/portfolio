@@ -5,6 +5,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 import InlineInput from './ui/InlineInput';
 import { loginInWithEmail } from '../../services/firebase';
+import { Button } from '../ui/StyledButton';
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
@@ -23,9 +24,9 @@ const Login = () => {
         label="Password"
         register={register}
       ></InlineInput>
-      <button type="submit">
+      <Button type="submit">
         <FontAwesomeIcon icon={faArrowRight} />
-      </button>
+      </Button>
     </Form>
   );
 };

@@ -1,19 +1,22 @@
 import styled from 'styled-components';
 import Avatar from './Avatar';
+import { Button, GradientButton } from './ui/StyledButton';
+import { useTranslation } from 'react-i18next';
 
 const Bio = () => {
+  const { t } = useTranslation();
   return (
     <Wrapper>
       <Avatar />
       <BioWrapper>
         <Headline>
-          Olá, meu nome é <span>Guilherme Andrade.</span>
+          {t('Hi, I am')} <span>Guilherme Andrade.</span>
         </Headline>
-        <SubHeadline>Desenvolvedor Front-End e FullStack no Brasil, especializado em Desenvolvimento Web. </SubHeadline>
+        <SubHeadline>{t('bio')}</SubHeadline>
       </BioWrapper>
       <ButtonWrappers>
-        <button className="gradient">GET IN TOUCH</button>
-        <button>VIEW ALL WORKS</button>
+        <GradientButton className="gradient">{t('GET IN TOUCH')}</GradientButton>
+        <Button>{t('VIEW ALL WORKS')}</Button>
       </ButtonWrappers>
     </Wrapper>
   );

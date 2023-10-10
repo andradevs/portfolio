@@ -1,6 +1,9 @@
 import { styled } from 'styled-components';
-
+import Flags from './Flags';
+import { Button } from './ui/StyledButton';
+import { useTranslation } from 'react-i18next';
 const Navbar = () => {
+  const { t } = useTranslation();
   return (
     <Wrapper>
       <Icon onClick={() => console.log('HAHAHA')}>
@@ -8,21 +11,22 @@ const Navbar = () => {
       </Icon>
       <NavItens>
         <li>
-          <span>Home</span>
+          <span>{t('Home')}</span>
         </li>
         <li>
-          <span>Projetos</span>
+          <span>{t('Projects')}</span>
         </li>
         <li>
-          <span>Blog</span>
+          <span>{t('Blog')}</span>
         </li>
         <li>
-          <span>Sobre</span>
+          <span>{t('About')}</span>
         </li>
       </NavItens>
       <Contact>
-        <button>LET'S TALK</button>
+        <Button>{t("LET'S TALK")}</Button>
       </Contact>
+      <Flags />
     </Wrapper>
   );
 };
@@ -31,7 +35,7 @@ export default Navbar;
 
 const Wrapper = styled.nav`
   display: grid;
-  grid-template-columns: 20% 1fr auto;
+  grid-template-columns: 20% 1fr auto auto;
   width: 100%;
   height: 80px;
   justify-content: center;
