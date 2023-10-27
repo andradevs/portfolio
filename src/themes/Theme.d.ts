@@ -16,6 +16,7 @@ type Theme = {
   display2: Font;
   paragraph1: Font;
   paragraph2: Font;
+  paragraph3: Font;
   title: Font;
   menu: Font;
 };

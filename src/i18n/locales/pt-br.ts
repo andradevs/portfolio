@@ -10,5 +10,6 @@ export default {
     'GET IN TOUCH': 'ENTRE EM CONTATO',
     'VIEW ALL WORKS': 'MEUS TRABALHOS',
     'What I do.': 'O que eu faço.',
+    'Developed by': 'Desenvolvido por',
   },
 };

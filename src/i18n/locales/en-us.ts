@@ -10,5 +10,6 @@ export default {
     'GET IN TOUCH': 'GET IN TOUCH',
     'VIEW ALL WORKS': 'VIEW ALL WORKS',
     'What I do.': 'What I do.',
+    'Developed by': 'Developed by',
   },
 };

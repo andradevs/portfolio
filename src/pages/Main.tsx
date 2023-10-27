@@ -5,8 +5,7 @@ import Bio from '../components/Bio';
 import Skills from '../components/Skills';
 import ThemeToggle from '../components/ThemeToggle';
 import LoginToken from '../components/LoginToken';
-import Counter from '../components/Counter';
-import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 const Main = () => {
   return (
@@ -16,8 +15,9 @@ const Main = () => {
         <Bio />
         <Skills />
         {/* <Counter /> */}
+        <Footer />
       </Container>
-      <Link to="/login">Login</Link>
+      {/* <Link to="/login">Login</Link> */}
       <ThemeToggle />
       <LoginToken />
     </Wrapper>

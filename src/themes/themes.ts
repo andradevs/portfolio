@@ -78,6 +78,13 @@ export default {
       'font-weight': '400;',
       'line-height': '125%;',
     },
+    paragraph3: {
+      'font-family': '"Inter", sans-serif;',
+      'font-size': '14px;',
+      'font-style': 'normal;',
+      'font-weight': '400;',
+      'line-height': '125%;',
+    },
     title: {
       'font-family': '"Inter", sans-serif;',
       'font-size': '18px;',
