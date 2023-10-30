@@ -11,5 +11,6 @@ export default {
     'VIEW ALL WORKS': 'MEUS TRABALHOS',
     'What I do.': 'O que eu faço.',
     'Developed by': 'Desenvolvido por',
+    'Look at My': 'Veja Meus',
   },
 };

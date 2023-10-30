@@ -82,7 +82,7 @@ export default {
       'font-family': '"Inter", sans-serif;',
       'font-size': '14px;',
       'font-style': 'normal;',
-      'font-weight': '400;',
+      'font-weight': '300;',
       'line-height': '125%;',
     },
     title: {

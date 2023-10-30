@@ -6,6 +6,7 @@ import Skills from '../components/Skills';
 import ThemeToggle from '../components/ThemeToggle';
 import LoginToken from '../components/LoginToken';
 import Footer from '../components/Footer';
+import Projects from '../components/Projects';
 
 const Main = () => {
   return (
@@ -13,6 +14,7 @@ const Main = () => {
       <Container>
         <Navbar />
         <Bio />
+        <Projects />
         <Skills />
         {/* <Counter /> */}
         <Footer />

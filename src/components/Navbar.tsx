@@ -35,6 +35,7 @@ export default Navbar;
 
 const Wrapper = styled.nav`
   display: grid;
+  padding: 0px 15px;
   grid-template-columns: 20% 1fr auto auto;
   width: 100%;
   height: 80px;
@@ -45,7 +46,7 @@ const Wrapper = styled.nav`
 const Icon = styled.div`
   cursor: pointer;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   height: 100%;
   color: ${({ theme }) => theme['onPrimary']};

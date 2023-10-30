@@ -23,6 +23,7 @@ const Skills = () => {
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
+  padding: 0px 15px;
   justify-content: center;
   align-items: start;
   flex-direction: column;
