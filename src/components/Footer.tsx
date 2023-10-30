@@ -112,7 +112,7 @@ const LinkWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 `;
 const LinkButton = styled(Link)`
   /* position: relative; */
@@ -125,7 +125,7 @@ const LinkButton = styled(Link)`
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 1px transparent;
+    border: solid 2px transparent;
     border-radius: 80px;
     background-image: linear-gradient(${({ theme }) => theme['primary']}, ${({ theme }) => theme['primary']}),
       ${({ theme }) => theme['gradient']};

@@ -33,7 +33,7 @@ const Wrapper = styled.div`
 `;
 const Container = styled.div`
   display: flex;
-  max-width: 1440px;
+  width: 1440px;
   flex-direction: column;
   align-items: center;
   gap: 2rem;

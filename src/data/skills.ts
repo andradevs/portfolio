@@ -6,6 +6,11 @@ export default [
   { name: 'TypeScript', path: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg' },
   { name: 'JavaScript', path: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg' },
   { name: 'Vue.js', path: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg' },
+  {
+    name: 'Next.js',
+    path: 'https://seeklogo.com/images/N/next-js-logo-7929BCD36F-seeklogo.com.png',
+  },
   { name: 'Java', path: 'https://upload.wikimedia.org/wikipedia/pt/3/30/Java_programming_language_logo.svg' },
   { name: 'NodeJs', path: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg' },
+  { name: 'Firebase', path: 'https://cdn.icon-icons.com/icons2/2699/PNG/512/firebase_logo_icon_171157.png' },
 ];

@@ -24,7 +24,7 @@ const Bio = () => {
 const Wrapper = styled.div`
   display: flex;
   gap: 1rem;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
