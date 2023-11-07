@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 100" width="50px" height="50px"  x="0" y="0" fill='url(#grad1)'>
+ <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="25%" style="stop-color:#b16cea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff5e69;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#ff8a56;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffa84b;stop-opacity:1" />
+    </linearGradient>
+  </defs><path d="M49.64,21.31v.94C49.65,21.65,49.64,21.31,49.64,21.31Z"/><path d="M49.64,22.25c0,3.65-.46,17-4.89,21.39-4.63,4.63-19.56,5-22.62,5,3.06,0,18,.35,22.62,5C49.18,58,49.61,71.32,49.64,75c0-3.66.46-17,4.9-21.4,4.62-4.62,19.55-4.95,22.62-5-3.07,0-18-.34-22.62-5C50.1,39.21,49.68,25.9,49.64,22.25Z"/><path d="M21.57,48.61h0Z"/><path d="M49.64,75.92s0-.34,0-.94Z"/><path d="M77.16,48.61h0Z"/></svg>

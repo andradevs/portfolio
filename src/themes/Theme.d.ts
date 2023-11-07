@@ -12,6 +12,7 @@ type Theme = {
   headline3: Font;
   headline4: Font;
   headline5: Font;
+  headline6: Font;
   display1: Font;
   display2: Font;
   paragraph1: Font;

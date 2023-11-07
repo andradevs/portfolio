@@ -12,5 +12,8 @@ export default {
     'What I do.': 'O que eu faço.',
     'Developed by': 'Desenvolvido por',
     'Look at My': 'Veja Meus',
+    Develop: 'Desenvolver',
+    Discover: 'Descobrir',
+    Create: 'Criar',
   },
 };

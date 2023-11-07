@@ -4,7 +4,6 @@ import ThemeToggle from '../components/ThemeToggle';
 import LoginToken from '../components/LoginToken';
 import { AuthContext } from '../contexts/AuthProvider';
 import React, { useContext } from 'react';
-import Counter from '../components/Counter';
 
 const Login = () => {
   const { currentUser } = useContext(AuthContext);
@@ -16,7 +15,6 @@ const Login = () => {
       <Outlet />
       <ThemeToggle />
       <LoginToken />
-      <Counter />
     </Container>
   );
 };

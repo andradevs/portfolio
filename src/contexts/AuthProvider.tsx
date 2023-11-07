@@ -12,7 +12,7 @@ interface IProps {
   children: React.ReactElement;
 }
 
-export const AuthContext = createContext<IContext | null>(null);
+export const AuthContext = createContext<IContext>({ currentUser: null, loading: true, signed: true });
 
 export const useAuthContext = () => {
   const context = useContext(AuthContext);
@@ -46,9 +46,9 @@ export const AuthProvider = ({ children }: IProps) => {
     };
   }, []);
 
-  useEffect(() => {
-    console.log(currentUser, 'avocado');
-  }, [currentUser?.email]);
+  // useEffect(() => {
+  //   console.log(currentUser, 'avocado');
+  // }, [currentUser?.email]);
 
   return <AuthContext.Provider value={{ currentUser, signed, loading }}>{children}</AuthContext.Provider>;
 };

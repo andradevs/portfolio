@@ -6,6 +6,7 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "types": ["vite-plugin-svgr/client"],
+    "noImplicitAny": false,
 
     /* Bundler mode */
     "moduleResolution": "bundler",

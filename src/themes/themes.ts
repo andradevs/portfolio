@@ -64,6 +64,13 @@ export default {
       'font-weight': '700;',
       'line-height': '125%;',
     },
+    headline6: {
+      'font-family': '"Bai Jamjuree", sans-serif;',
+      'font-size': '18px;',
+      'font-style': 'normal;',
+      'font-weight': '700;',
+      'line-height': '125%;',
+    },
     paragraph1: {
       'font-family': '"Inter", sans-serif;',
       'font-size': '18px;',
