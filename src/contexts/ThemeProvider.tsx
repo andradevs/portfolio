@@ -24,7 +24,7 @@ export const useThemeContext = () => {
 };
 
 export const ThemeProvider = ({ children }: IProps) => {
-  const [theme, setTheme] = useState<'light' | 'dark'>(getFromLS('theme'));
+  const [theme, setTheme] = useState<'light' | 'dark'>(getFromLS('theme') || 'dark');
   // const [icon, setIcon] = useState();
 
   const toggleTheme = () => {

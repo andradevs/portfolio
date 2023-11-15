@@ -15,7 +15,6 @@ const Main = () => {
       <Container>
         <Navbar />
         <Bio />
-        <Divider />
         <Projects />
         <Skills />
         {/* <Counter /> */}
@@ -40,5 +39,5 @@ const Container = styled.div`
   width: 1440px;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  /* gap: 2rem; */
 `;

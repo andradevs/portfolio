@@ -59,6 +59,7 @@ const Wrapper = styled.div`
   width: 100vw;
   position: relative;
   overflow-y: visible;
+  align-self: flex-end;
 `;
 const Content = styled.div`
   width: calc(100% + 30px);

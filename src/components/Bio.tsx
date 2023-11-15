@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Avatar from './Avatar';
 import { Button, GradientButton } from './ui/StyledButton';
 import { useTranslation } from 'react-i18next';
+import Divider from './Divider';
 
 const Bio = () => {
   const { t } = useTranslation();
@@ -18,6 +19,7 @@ const Bio = () => {
         <GradientButton className="gradient">{t('GET IN TOUCH')}</GradientButton>
         <Button>{t('VIEW ALL WORKS')}</Button>
       </ButtonWrappers>
+      <Divider />
     </Wrapper>
   );
 };
