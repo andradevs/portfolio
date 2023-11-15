@@ -7,7 +7,6 @@ import ThemeToggle from '../components/ThemeToggle';
 import LoginToken from '../components/LoginToken';
 import Footer from '../components/Footer';
 import Projects from '../components/Projects';
-import Divider from '../components/Divider';
 
 const Main = () => {
   return (
